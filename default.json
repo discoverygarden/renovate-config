@@ -1,0 +1,33 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "composer": {
+    "enabled": false
+  },
+  "hostRules": [
+    {
+      "hostType": "docker",
+      "matchHost": "231224489621.dkr.ecr.us-east-1.amazonaws.com",
+      "username": "AKIATLVQNW2K7ZGJVB7L",
+      "encrypted": {
+        "password": "hQIMA/xDdHCJBTolAQ/+OdONSrUS0d9mkPWEcFcNadxZJzSTG/qwo3gHP1tJm85ceNqEUGfueu39xa1RdEYpB8e9WrJ6DvMiYWG1j7XkWEY6251sJ6Jb9wXjVCcxRY0y8iZUlay+Fuev9j9+9ApmSFu+xOONYpf1w0jHkiNOiYNR7RogTsv7FmGxKlkGQq5DK7hT7Ah3vK3RP2QnUnMSdSP7RXvC5Q4dNAXiF+28d+nIGIOO4aufslVTwL5vrkmXQtGCzewdd933GlaRNYAuQrmcC3AoPbR6NOoh0LB0+XDQYpWGankEHvpBtiJuXOvpWibPktBjnXTTnwmlFKSjT80+BFay3C5mLSWeWjhGmQ74GiTTLTyJlqvIrHJTyNQ5wrCjboxkXCSd3r83dS8aduukP0zEGgqnePO48G5OCcxqy9f4BvsnxQvLqd7AgNc6MFcAtcULfl0BCCb1Teahw4iYoNon4psNwrHMePO3RZYaCWEdXQ146c5KI/kls7ue74mi5Yh5AUhZGs1cmv0btGHWOToDSVOp5GUOJWlrGp8lnQuINXh0BGdhjqMHfnmNbNk0cr6hE96MDYqY9lPDndDq6YAMZFfaCWoLJhugRnsub4LkOQVV//LuZ11+24R+5enDeXMxqc6omTlEecQtR3Mhgcw1kvo/SqyJfVGi9OCdqeAkCGSFnsQz27KYGzbSgQHjGJZV69QbCZoiFnPyKWCQSf37clTCWk65btKMZjbWV7bEZ8tzUyhqIb7qeQJau9hliO61xoWwnZc4Uv3BxKRp69kjbV9+/A0YwnLkW+TQgKnSvAs+t4kBXJXSZeoKbTCxuaI0FRBDy51xs2bMbrkINF3gjMIoN48tBHcsY3R8ZA===C4xQ"
+      }
+    }
+  ],
+  "packageRules": [
+    {
+      "matchFileNames": [".ddev/**"],
+      "matchManagers": [
+        "dockerfile",
+        "docker-compose"
+      ],
+      "groupName": "ddev images",
+      "labels": [
+        "no-update"
+      ],
+      "automerge" : true
+    }
+  ]
+}
