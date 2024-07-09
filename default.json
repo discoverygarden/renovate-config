@@ -47,7 +47,8 @@
       ],
       "labels": [
         "patch"
-      ]
+      ],
+      "automerge" : true
     }
   ]
 }
