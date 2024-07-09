@@ -28,6 +28,26 @@
         "no-update"
       ],
       "automerge" : true
+    },
+    {
+      "matchFileNames": ["Dockerfile"],
+      "matchRepositories": [
+        "discoverygarden/dgi-starter",
+        "discoverygarden/*-drupal"
+      ],
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchPackageNames": [
+          "231224489621.dkr.ecr.us-east-1.amazonaws.com/drupal-base"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "labels": [
+        "patch"
+      ]
     }
   ]
 }
