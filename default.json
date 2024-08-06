@@ -16,6 +16,16 @@
       }
     }
   ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update _VERSION variables in Dockerfiles",
+      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z\\.-]+?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: versioning=(?<versioning>.+?))?\n(?:ENV|ARG) .+?_VERSION=(?<currentValue>.+)(?:\n(?:ENV|ARG) .+?_(?:DIGEST|COMMIT_HASH)=(?<currentDigest>.+))?"
+      ]
+    }
+  ],
   "packageRules": [
     {
       "matchFileNames": [".ddev/**"],
