@@ -59,6 +59,44 @@
         "patch"
       ],
       "automerge" : true
+    },
+    {
+      "matchRepositories": [
+        "discoverygarden/activemq-image",
+        "discoverygarden/alpaca-image",
+        "discoverygarden/crayfish-image",
+        "discoverygarden/cantaloupe-image",
+        "discoverygarden/drupal-base-image",
+        "discoverygarden/drupal-base-dev-image",
+        "discoverygarden/solr-image",
+        "discoverygarden/solr-ctda-image"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "labels": [
+        "patch"
+      ],
+      "automerge" : true
+    },
+    {
+      "matchRepositories": [
+        "discoverygarden/activemq-image",
+        "discoverygarden/alpaca-image",
+        "discoverygarden/crayfish-image",
+        "discoverygarden/cantaloupe-image",
+        "discoverygarden/drupal-base-image",
+        "discoverygarden/drupal-base-dev-image",
+        "discoverygarden/solr-image",
+        "discoverygarden/solr-ctda-image"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "labels": [
+        "minor"
+      ],
+      "automerge" : true
     }
   ]
 }
