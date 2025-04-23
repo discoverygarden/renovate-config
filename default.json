@@ -110,6 +110,11 @@
     {
       "matchPackageNames": ["231224489621.dkr.ecr.us-east-1.amazonaws.com/*"],
       "versioning": "regex:^(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?(\\-(?<build>\\d+))?(-(?<compatibility>.*))?$"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["docker/dockerfile"],
+      "enabled": false
     }
   ]
 }
