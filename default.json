@@ -39,7 +39,8 @@
         "dockerfile"
       ],
       "matchPackageNames": [
-          "231224489621.dkr.ecr.us-east-1.amazonaws.com/drupal-base"
+          "231224489621.dkr.ecr.us-east-1.amazonaws.com/drupal-base",
+          "ghcr.io/discoverygarden/drupal-base"
       ],
       "matchUpdateTypes": [
         "patch",
@@ -108,7 +109,10 @@
       "automerge" : false
     },
     {
-      "matchPackageNames": ["231224489621.dkr.ecr.us-east-1.amazonaws.com/*"],
+      "matchPackageNames": [
+        "231224489621.dkr.ecr.us-east-1.amazonaws.com/*",
+        "ghcr.io/discoverygarden/*"
+      ],
       "versioning": "regex:^(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?(\\-(?<build>\\d+))?(-(?<compatibility>.*))?$"
     },
     {
