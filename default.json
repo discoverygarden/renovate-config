@@ -119,6 +119,14 @@
       "matchDatasources": ["docker"],
       "matchPackageNames": ["docker/dockerfile"],
       "enabled": false
+    },
+    {
+      "description": "Major and digest updates always need a human to review and merge; keep this rule last so it overrides any automerge enabled above.",
+      "matchUpdateTypes": [
+        "major",
+        "digest"
+      ],
+      "automerge" : false
     }
   ]
 }
