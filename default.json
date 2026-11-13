@@ -28,10 +28,16 @@
   "packageRules": [
     {
       "matchFileNames": [".ddev/**"],
-      "matchManagers": [
-        "dockerfile",
-        "docker-compose"
+      "matchDatasources": ["docker"],
+      "groupName": "ddev images",
+      "labels": [
+        "no-update"
       ],
+      "automerge" : true
+    },
+    {
+      "matchFileNames": [".ddev/**"],
+      "matchManagers": ["dockerfile"],
       "groupName": "ddev images",
       "labels": [
         "no-update"
