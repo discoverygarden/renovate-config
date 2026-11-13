@@ -14,15 +14,30 @@
       "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z\\.-]+?)(?: depName=(?<depName>.+?))?(?: packageName=(?<packageName>.+?))?(?: extractVersion=(?<extractVersion>.+?))?(?: versioning=(?<versioning>.+?))?\n(?:ENV|ARG) .+?_VERSION=(?<currentValue>.+)(?:\n(?:ENV|ARG) .+?_(?:DIGEST|COMMIT_HASH)=(?<currentDigest>.+))?"
       ]
+    },
+    {
+      "customType": "regex",
+      "description": "Docker images annotated in DDEV .env files",
+      "managerFilePatterns": ["/(^|/)\\.ddev/\\.env(\\.[^/]+)?$/"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>\\S+)(?:\\s+versioning=(?<versioning>\\S+))?\\s*\\n[A-Z0-9_]+=(?<depName>[^:\\s]+):(?<currentValue>[^\\s@]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}"
     }
   ],
   "packageRules": [
     {
       "matchFileNames": [".ddev/**"],
-      "matchManagers": [
-        "dockerfile",
-        "docker-compose"
+      "matchDatasources": ["docker"],
+      "groupName": "ddev images",
+      "labels": [
+        "no-update"
       ],
+      "automerge" : true
+    },
+    {
+      "matchFileNames": [".ddev/**"],
+      "matchManagers": ["dockerfile"],
       "groupName": "ddev images",
       "labels": [
         "no-update"
