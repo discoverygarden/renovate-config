@@ -75,7 +75,12 @@
         "discoverygarden/drupal-base-image",
         "discoverygarden/drupal-base-dev-image",
         "discoverygarden/solr-image",
-        "discoverygarden/solr-ctda-image"
+        "discoverygarden/solr-ctda-image",
+        "discoverygarden/libjpeg-turbo-image",
+        "discoverygarden/pgbouncer-image",
+        "discoverygarden/psql-s3-image",
+        "discoverygarden/solr-operator-operator",
+        "discoverygarden/utils-image"
       ],
       "matchUpdateTypes": [
         "patch"
@@ -94,7 +99,12 @@
         "discoverygarden/drupal-base-image",
         "discoverygarden/drupal-base-dev-image",
         "discoverygarden/solr-image",
-        "discoverygarden/solr-ctda-image"
+        "discoverygarden/solr-ctda-image",
+        "discoverygarden/libjpeg-turbo-image",
+        "discoverygarden/pgbouncer-image",
+        "discoverygarden/psql-s3-image",
+        "discoverygarden/solr-operator-operator",
+        "discoverygarden/utils-image"
       ],
       "matchUpdateTypes": [
         "minor"
@@ -113,7 +123,12 @@
         "discoverygarden/drupal-base-image",
         "discoverygarden/drupal-base-dev-image",
         "discoverygarden/solr-image",
-        "discoverygarden/solr-ctda-image"
+        "discoverygarden/solr-ctda-image",
+        "discoverygarden/libjpeg-turbo-image",
+        "discoverygarden/pgbouncer-image",
+        "discoverygarden/psql-s3-image",
+        "discoverygarden/solr-operator-operator",
+        "discoverygarden/utils-image"
       ],
       "matchUpdateTypes": [
         "major"
