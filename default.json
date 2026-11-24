@@ -148,6 +148,19 @@
       "enabled": false
     },
     {
+      "description": "Go minor bumps change the toolchain; solr-operator-operator has no smoke test, so a human reviews them.",
+      "matchRepositories": [
+        "discoverygarden/solr-operator-operator"
+      ],
+      "matchPackageNames": [
+        "golang"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "automerge" : false
+    },
+    {
       "description": "Major and digest updates always need a human to review and merge; keep this rule last so it overrides any automerge enabled above.",
       "matchUpdateTypes": [
         "major",
