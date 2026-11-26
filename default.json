@@ -75,7 +75,10 @@
         "discoverygarden/drupal-base-image",
         "discoverygarden/drupal-base-dev-image",
         "discoverygarden/solr-image",
-        "discoverygarden/solr-ctda-image"
+        "discoverygarden/solr-ctda-image",
+        "discoverygarden/psql-s3-image",
+        "discoverygarden/solr-operator-operator",
+        "discoverygarden/utils-image"
       ],
       "matchUpdateTypes": [
         "patch"
@@ -94,7 +97,10 @@
         "discoverygarden/drupal-base-image",
         "discoverygarden/drupal-base-dev-image",
         "discoverygarden/solr-image",
-        "discoverygarden/solr-ctda-image"
+        "discoverygarden/solr-ctda-image",
+        "discoverygarden/psql-s3-image",
+        "discoverygarden/solr-operator-operator",
+        "discoverygarden/utils-image"
       ],
       "matchUpdateTypes": [
         "minor"
@@ -113,7 +119,10 @@
         "discoverygarden/drupal-base-image",
         "discoverygarden/drupal-base-dev-image",
         "discoverygarden/solr-image",
-        "discoverygarden/solr-ctda-image"
+        "discoverygarden/solr-ctda-image",
+        "discoverygarden/psql-s3-image",
+        "discoverygarden/solr-operator-operator",
+        "discoverygarden/utils-image"
       ],
       "matchUpdateTypes": [
         "major"
@@ -134,6 +143,21 @@
       "matchDatasources": ["docker"],
       "matchPackageNames": ["docker/dockerfile"],
       "enabled": false
+    },
+    {
+      "description": "Go minor bumps (the golang image and the go directive in go.mod) change the toolchain; solr-operator-operator has no smoke test, so a human reviews them.",
+      "matchRepositories": [
+        "discoverygarden/solr-operator-operator"
+      ],
+      "matchPackageNames": [
+        "golang",
+        "docker.io/golang",
+        "go"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "automerge" : false
     },
     {
       "description": "Major and digest updates always need a human to review and merge; keep this rule last so it overrides any automerge enabled above.",
